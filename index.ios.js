@@ -21,9 +21,10 @@ var ZhihuDaily = React.createClass({
     return (
       <NavigatorIOS
         style={styles.container}
-        tintColor='#008bed'
+        barTintColor='#008bed'
+        titleTextColor='white'
         initialRoute={{
-          title: '知乎日报 - 每天三次，每次七分钟',
+          title: '今日热闻',
           component: ListView
         }}/>
     );
