@@ -14,6 +14,7 @@ var {
 var api = require('../../Config/api');
 var styles = require('./style');
 var CellView = require('./Elements/Cell');
+var DetailView = require('../Detail');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -65,7 +66,7 @@ module.exports = React.createClass({
           }}>
         {this.state.topStories.map(function (story) {
           return (
-            <View>
+            <View onSelect={() => this.selectCell(story)}>
               <Image style={styles.slideImage}
                      source={{ uri: story.image }} />
               <Text style={styles.slideText} numberOfLines={2}>{story.title}</Text>
@@ -86,10 +87,21 @@ module.exports = React.createClass({
     );
   },
 
-  renderCell: function (news) {
+  renderCell: function (story) {
     return (
-      <CellView news={news} />
+      <CellView news={story}
+        onSelect={() => this.selectCell(story) } />
     )
+  },
+
+  selectCell: function (story) {
+    this.props.navigator.push({
+      title: story.title,
+      component: DetailView,
+      passProps: {
+        id: story.id
+      }
+    });
   }
 
 });

@@ -22,7 +22,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center'
   },
   loadingText: {
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10,
@@ -40,7 +40,7 @@ module.exports = StyleSheet.create({
     fontSize: 20
   },
   dot: {
-    backgroundColor:'rgba(0,0,0,0.2)',
+    backgroundColor: 'rgba(0,0,0,0.2)',
     width: 8,
     height: 8,
     borderRadius: 4,

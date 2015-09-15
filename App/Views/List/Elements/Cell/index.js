@@ -14,7 +14,9 @@ var styles = require('./style');
 module.exports = React.createClass({
   render: function () {
     return (
-      <TouchableHighlight onPress={this.props.onSelect}>
+      <TouchableHighlight
+        onPress={this.props.onSelect}
+        underlayColor='white'>
         <View style={styles.cell}>
           <Text style={styles.text} numberOfLines={3}>
             {this.props.news.title}
