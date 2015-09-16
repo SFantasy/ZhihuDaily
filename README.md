@@ -3,6 +3,10 @@ Zhihu Daily
 
 Zhihu Daily iOS App - Made with [React Native](http://facebook.github.io/react-native/).
 
+## Screenshot
+
+<img width="50%" src="./list_screenshot.png">
+
 ## Develop
 
 ### API
